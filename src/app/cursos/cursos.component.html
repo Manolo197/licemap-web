@@ -1,0 +1,203 @@
+<div class="container">
+  
+  <div class="h1">Cursos.</div>
+  <div class="container">
+      <div class="row">
+          <div class="col-md-3 h5 border border-primary rounded">Todo lo que necesitas.</div>
+          <div class="col-md-1"></div>
+          <div class="col-md-3 h5 border border-primary rounded">Aquí es donde quieres estar.</div>
+          <div class="col-md-1"></div>
+          <div class="col-md-3 h5 border border-primary rounded">Todo lo que necesitas esta aquí frente a ti.</div>
+        </div>
+  </div>
+
+</div>
+
+<!--nueva lista-->
+<br><br>
+
+<div *ngIf="error">
+    <div class="card">
+        <div class="card-header">
+          Featured
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">¡Error!</h5>
+          <p class="card-text">{{mensaje}}</p>
+        </div>
+      </div>
+</div>
+
+
+<div *ngIf="!error">
+
+  <div class="container">
+      <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-8">
+              <div class="card-deck">
+                  <div *ngFor="let curso of cursos">
+                      <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                          <div class="card-header">{{curso.nombre}}</div>
+                          <div class="card-body">
+                            <h5 class="card-title">{{curso.description}}</h5>
+                            <ul style="list-style: none;">
+                                <li *ngFor="let tema of curso.temas; let i= index">
+                                    <p class="card-text" *ngIf="i>0">{{i}}.- {{tema}}</p>
+                                </li>
+                              </ul>
+                          </div>
+                        </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+ <br><br>
+
+ <div class="container">
+   
+   <div class="h1">Profesores</div>
+   <div class="h4">Contamos con profesores calificados y expertos en la materia.</div>
+
+ </div>
+
+ <br><br>
+
+      <div class="container">
+          <div>
+      
+              <ul class="list-unstyled">
+        <li class="media">
+          <img class="mr-3" src="assets/imgs/no-user.png" width="100" height="100">
+          <div class="media-body">
+            <h5 class="mt-0 mb-1">Doc. Elizabeth Sánchez Martínez</h5>
+        
+            <ul class="list-unstyled">
+                  
+                  <li>Licenciada en Derecho por la UNAM.</li>
+                  <li>Maestría en Derecho Procesal Penal.</li>
+                  <li>Doctorado en Derecho Penal.</li>
+                  <li>Maestría en Pedagogía.</li>
+                  <li>Doctorado en Educación.</li>
+                  <li>Posdoctorado en Derecho.</li>
+                  <li>Coautora del Libro “EL NUEVO MINISTERIO PUBLICO INVESTIGADOR EL LICENCIADO EN CRIMINALISTICA”.</li>
+                  <li>Abogada Postulante.</li>
+                  <li>Presidente del Consejo de Control y Vigilancia del Colegio de Abogados Ilustres de la República Mexicana.</li>
+                  <li>Conferencista.</li>
+                  <li>Abogada postulante en materia: 
+        
+                      <ul>
+                          
+                          <li>Penal</li>
+                          <li>Civil</li>
+                          <li>Familiar</li>
+                          <li>Mercantil</li>
+                          <li>Amparo</li>
+                          <li>Entre otras</li>
+        
+                      </ul>                
+        
+                  </li>
+        
+              </ul>
+                        
+          </div>
+        </li>
+        
+        <br><br>
+        
+        <li class="media my-4">
+          <img class="mr-3" src="assets/imgs/no-user.png" width="100" height="100">
+          <div class="media-body">
+            <h5 class="mt-0 mb-1">Abraham Lara Pérez</h5>
+            
+            <ul class="list-unstyled">
+              
+          <li>Licenciado en Derecho por la UNAM.</li>
+          <li>Maestría en Pedagogía.</li>
+          <li>Coautor del libro “EL NUEVO MINISTERIO PUBLICO INVESTIGADOR EL LICENCIADO EN CRIMINALISTICA”.</li>
+          <li>Catedrático en Licenciatura de diversas Materias.</li>
+          <li>Secretario del Colegio de Abogados Ilustres de la República Mexicana.</li>
+          <li>Perito Valuador de Arte.</li>
+          <li>Perito Autentificado de Arte.</li>
+          <li>Abogada postulante en materia:
+           
+                  <ul>
+                          <li>Penal</li>
+                          <li>Civil</li>
+                          <li>Familiar</li>
+                          <li>Mercantil</li>
+                          <li>Amparo</li>
+                          <li>Entre otras</li>
+                  </ul>
+          </li>
+        
+          </ul>
+        
+          </div>
+        </li>
+        
+        <br><br>
+        
+        <li class="media">
+          <img class="mr-3" src="assets/imgs/no-user.png" width="100" height="100">
+          <div class="media-body">
+            <h5 class="mt-0 mb-1">REGINA ROJAS GARCÍA.</h5>
+            
+            <ul class="list-unstyled">
+               
+           <li>LICENCIATURA EN DERECHO: UNAM.</li>
+           <li>MAESTRÍA EN DERECHO: UNAM.</li>
+           <li>ESPECIALIDAD EN DERECHO CIVIL: UNAM.</li>
+           <li>Asesora en el Seminario de Titulación Colectiva en el área Administrativa impartido en la FES ARAGÓN- UNAM.</li>
+           <li>Coordinadora Académica del Diplomado “Derechos Humanos: su        portabilidad en diversas instituciones familiares”.</li>
+           <li>Catedrática de la Licenciatura de Derecho en la Facultad de Estudios Superiores</li>
+           <li>FES ARAGÓN- UNAM.</li>
+           <li>Experta en Política Exterior y Convenios Internacionales.</li>
+           <li>Responsable de Despacho Jurídico, abogada postulante en materia familiar, civil, mercantil, penal y laboral.</li>
+           <li>Auxiliar del Secretario de Acuerdos “B” del Juzgado Tercero de lo Familiar del Distrito Federal. </li>
+        
+           </ul>
+        
+          </div>
+        </li>
+        
+        <br><br>
+        
+        <li class="media">
+          <img class="mr-3" src="assets/imgs/no-user.png" width="100" height="100">
+          <div class="media-body">
+            <h5 class="mt-0 mb-1">Dr. ANTONIO LÓPEZ MÉNDEZ.</h5>
+            
+             <ul class="list-unstyled">
+              
+          <li>Licenciatura en: Derecho por la UNAM</li>
+          <li>Licenciatura en: Economía por la Universidad Autónoma Metropolitana.</li>
+          <li>Maestría en: Política Criminal por la UNAM</li>
+          <li>Doctorado en: Derecho Penal Penitenciario por la Universidad Complutense de Madrid, España.</li>
+          <li>Maestría en Pedagogía</li>
+          <li>Doctorado en Educación</li>
+          <li>Doctorado en Derecho Penal</li>
+          <li>Posdoctorado en Derecho</li>
+          <li>Catedrático en diversas materias de licenciatura y posgrado.</li>
+          <li>Abogado postulante en materia penal y administrativa.</li>
+        
+          </ul>
+        
+          </div>
+        </li>
+        
+        </ul>
+          </div>  
+      </div>

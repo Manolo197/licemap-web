@@ -1,0 +1,130 @@
+<div class="container">
+  <div class="row">
+   
+    <div class="col-md-1"></div>
+    <div class="col-md-10">      
+      <div class="card-deck">    
+    <div class="card text-white bg-secondary mb-3">
+<div class="card-header h5 color">DEREHO FAMILIAR</div>
+<div class="card-body">
+  <p class="card-text">Demanda y contestación de: guarda y custodia; Pensión alimenticia; Divorcio incausado; Patria potestad, Juicios Orales, Audiencias Orales, Pruebas, Interrogatorio, Pliego de posiciones, Declaración de parte, Entrevista del menor, Alegatos, Procedimientos de la CDMX y Estado de México.</p>
+</div>
+</div>
+<div class="card text-white bg-secondary mb-3">
+<div class="card-header h5 color">EL JUICIO DE AMPARO</div>
+<div class="card-body">
+  <p class="card-text">Demanda de amparo indirecto, demanda de amparo directo, principios del juicio de amparo, amparo contra particulares, Recursos.</p>
+</div>
+</div>
+<div class="card text-white bg-secondary mb-3">
+<div class="card-header h5 color">JUICIO SUCESORIO</div>
+<div class="card-body">
+  <p class="card-text">Denuncia intestamentaria, Testamentarias;  Trámite judicial en todas sus secciones, Tramite ante Notario Público; Tramite Mixto (Judicial- Notario, Notario-Judicial).</p>
+</div>
+</div>
+  </div>
+    </div>
+  <div class="col-md-1"></div>
+  </div>
+</div>
+
+<!--Nueva lista-->
+
+   <div class="container">
+      <div class="row"> 
+
+          <div class="col-md-1"> </div>   
+            <div class="col-md-10"> 
+  
+                <div class="card text-white bg-secondary mb-3 ">
+  <div class="card-header h5 color">EL PROCESO PENAL ACUSATORIO Y ORAL</div>
+  <div class="card-body">
+    <p class="card-text">Reforma constitucional del 2008; Sistemas de enjuiciamiento penal; 
+      Principios rectores del sistema penal acusatorio; Etapas del procedimiento penal acusatorio 
+      (investigación, intermedia, juicio); Partes en el sistema penal acusatorio; Derechos del imputado y 
+      derechos de la víctima en el sistema penal acusatorio;  Medidas de protección, medidas cautelares; 
+      Soluciones alternas y formas de terminación anticipada (acuerdo reparatorio, 
+      suspensión condicional del proceso, procedimiento abreviado); Pruebas y su desahogo; Recursos.</p>
+  </div>
+  </div>
+            </div>
+  
+            <div class="col-md-1"> </div>
+  
+      </div>  
+   </div>
+
+   <!--Nueva lista-->
+        <div class="container">
+            <div class="row"> 
+
+                <div class="col-md-1"></div>
+                <div class="col-md-10 "> 
+    
+                    <div class="card-deck">
+    
+                        <div class="card text-white bg-secondary mb-3">
+    <div class="card-header h5 color">LOS DERECHOS HUMANOS Y LA REFORMA DEL 10 DE JULIO DE 2011</div>
+    <div class="card-body">
+      <p class="card-text">Que son los derechos humanos?; Que es el principio pro Personae?; Que es el control de constitucionalidad exofficio?; Que es el principio de subsidiariedad de los derechos humanos?; Que tratados  e Instrumentos internacionales se aplican en el  derecho mexicano?; Cuál es el alcance de los derechos humanos y los tratados internacionales en las diferentes ramas del derecho?.</p>
+    </div>
+    </div>
+      
+      <div class="card text-white bg-secondary mb-3">
+    <div class="card-header h5 color">CADENA DE CUSTODIA EN EL PROCESO PENAL ACUSATORIO Y ORAL</div>
+    <div class="card-body">
+      <p class="card-text">Qué es la criminalística; División de la criminalística (campo y gabinete); Principios que rigen la criminalística; Lugar de los Hechos y lugar del hallazgo (acordonamiento); Indicios (búsqueda, fijación, recolección, embalaje, etiquetado, traslado, preservación); Análisis forense de los indicios; Protocolo de cadena de custodia; Responsabilidad legal de la preservación del indicio.</p>
+    </div>
+    </div>
+                     </div>
+    
+    
+                </div>
+    
+                <div class="col-md-1"></div>
+    
+            </div> 
+        </div> 
+
+        <!--nueva lista-->
+ 
+    <div class="container">
+        <div class="row">
+   
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              
+              <div class="card-deck">
+            
+            <div class="card text-white bg-secondary mb-3">
+        <div class="card-header h5 color">MEDIACIÓN Y SOLUCIÓN DE CONFLICTOS</div>
+        <div class="card-body">
+          <p class="card-text">Antecedentes y conceptos básicos de la mediación y la solución de conflictos; el cambio de paradigma en la solución de los asuntos legales; aproximación para resolver conflictos; modelo integrado de mediación; las formas para la solución del conflicto sin litigio.</p>
+        </div>
+        </div>
+        <div class="card text-white bg-secondary mb-3">
+        <div class="card-header h5 color">LA TEORÍA DEL CASO</div>
+        <div class="card-body">
+          <p class="card-text">Como se construye la teoría del caso, La verdadera estrategia de litigación, Dialéctica de la teoría del caso, Teoría Jurídica, Teoría Fáctica y Teoría Probatoria, Aspectos más relevantes del Procedimiento Acusatorio. </p>
+        </div>
+        </div>
+        
+        <div class="card text-white bg-secondary mb-3">
+        <div class="card-header h5 color">ESCRITURACIÓN DE INMUEBLES</div>
+        <div class="card-body">
+          <p class="card-text">Bienes (muebles e inmuebles); Derechos reales;  Posesión y Propiedad; Usucapión (juicio ordinario civil, juicio sumario); Otorgamiento y firma de escritura;  Inmatriculación (administrativa, judicial, información de dominio); Registro Público de la Propiedad; Notario Público; Procedimiento en la CDMX y Estado de México.</p>
+        </div>
+        </div>
+          </div>
+        
+            </div>
+        
+          <div class="col-md-1"></div>
+        
+         </div>
+    </div>
+
+
+<iframe width="712" height="401" src="https://www.youtube.com/embed/pRGWxYcCHqw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<iframe width="712" height="401" src="https://www.youtube.com/embed/TbsBEb1ZxWA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
