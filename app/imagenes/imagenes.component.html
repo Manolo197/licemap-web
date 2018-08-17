@@ -1,0 +1,82 @@
+<div *ngIf="identity">
+
+    <div class="container">
+        <p class="text-center h2">
+          Gestor de imagenes
+        </p>
+        <p class="text-center h5">
+          Seccion para administrar imagenes de la galeria.
+        </p>
+      </div>
+      
+      <div class="container">
+          <div class="alert alert-info" *ngIf="alert1">{{mensaje}}</div>
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <form #imageForm>
+              <div class="form-group">
+                <label>Eliga un archivo para subir:</label>
+                <input type="file" class="form-control-file" placeholder="Eliga una imagen..." (change)="fileChangeEvent($event)">
+                <br>
+                <input type="button" class="btn btn-primary" (click)="subirImagen()" value="Subir imagen">
+              </div>
+            </form>
+          </div>
+          <div class="col-md-4">
+        </div>
+      </div>
+    </div>
+      <!--°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°-->
+    <br>
+    <hr>
+
+<div class="container">
+    <p class="text-center h2">Imagenes en el sistema.</p>
+    <p class="text-center h5"> Haga click sobre sobre el boton debajo de la imagen para eliminarla.</p>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+          <div class="alert alert-info" *ngIf="alert2">{{mensaje2}}</div>
+        <div *ngFor="let imagen of imagenes; let i= index">
+            <div class="card text-center">
+                <div class="card-header">
+                  Imagen {{i+1}}
+                </div>
+                <div class="card-body">
+                  <p class="card-text"><img [src]="getImage(imagen.nombre)"  class="img-thumbnail"></p>
+                </div>
+                <div class="card-footer text-muted">
+                  <input type="button" class="btn btn-danger" value="Eliminar imagen" (click)="eliminarImagen(imagen._id)">
+                </div>
+              </div>
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!--°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°-->
+
+<div *ngIf="!identity">
+    <div class="card text-center">
+        <div class="card-header">
+          <strong>¡Espera!</strong>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">No has iniciado sesión</h5>
+          <p class="card-text">Si no eres un Administrador, por favor, vuelve a la pagina de inicio.</p>
+          <a routerLink="/" class="btn btn-primary">Regresar al inicio.</a>
+        </div>
+        <div class="card-footer text-muted">
+          
+        </div>
+      </div>
+</div>
+<br><br>

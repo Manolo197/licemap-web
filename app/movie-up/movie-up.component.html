@@ -1,0 +1,164 @@
+<div *ngIf="identity">
+    <br>
+    <div class="container">
+      <p class="text-center h2">
+        Agregar video
+      </p>
+      <p class="text-center h5">
+        Llena los campos para agregar un nuevo video a la pagina principal.
+      </p>
+    </div>
+    
+    <br><br>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+    
+          <div class="container">
+            <div class="alert alert-info" *ngIf="alert">{{mensaje}}</div>
+              <form #movieUpForm (ngSubmit)="getDatos()">
+                  <div class="form-group row">
+                    <label class="col-3 col-form-label">Nombre del video</label>
+                    <div class="col-9">
+                      <input class="form-control" type="text" placeholder="Video 1" #nombre="ngModel" name="nombre" [(ngModel)]="video.nombre">
+                    </div>
+                    <br>
+                      <span class="alert alert-danger text-center" *ngIf="nombre.value=='' && nombre.touched">Nombre no valido.</span>
+                  </div>
+                  <br>
+                  <div class="form-group row">
+                    <label class="col-3 col-form-label">Descripción</label>
+                    <div class="col-9">
+                      <textarea class="form-control" name="description" cols="30" rows="3" #description="ngModel" [(ngModel)]="video.description"></textarea>
+                    </div>
+                    <br>
+                      <span class="alert alert-danger" *ngIf="description.value=='' && description.touched">La descripcion del video es necesaria.</span>
+                  </div>
+                  <br>
+                  <div class="form-group row">
+                    <label class="col-3 col-form-label">Codigo embed</label>
+                    <div class="col-9">
+                      <input class="form-control" type="text" name="embed" placeholder="a1b2c3d4e" #embed="ngModel" [(ngModel)]="video.embed">          
+                    </div>
+                  </div>
+                  <p class="text-center"><input type="submit" class="btn btn-primary" value="Vista Previa"></p>
+          
+                </form >
+                <br>
+                  <span class="alert alert-danger" *ngIf="embed.value=='' && embed.touched">El codigo de inserccion es necesario.</span>
+          </div>
+        </div>
+        <div class="col-sm-1"></div>
+      </div>
+    </div>
+    <br>
+    
+    <div *ngIf="datos">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <div class="card text-center">
+                    <div class="card-header h3 text-center">
+                        {{this.video.nombre}}
+                    </div>
+                    <div class="card-block">
+                      <h4 class="card-title text-center">{{this.video.description}}</h4>
+                      <div class="embed-responsive embed-responsive-16by9">
+                          <iframe class="embed-responsive-item" [src]='getURL()' frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                    <div class="card-footer text-muted">
+                      Visitanos en: <a href="https://www.youtube.com/channel/UCMfYLyNvRlll7tr8wn9qo6A">Licemap</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+        <br>
+        <div>
+          <p class="text-center"><input type="button" (click)="guardarVideos()" class="btn btn-primary" value="Guardar video"></p>
+        </div>
+    </div>
+    <br>
+    <hr>
+    
+    <!--°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°-->
+    
+    <div class="container">
+      <p class="text-center h2">Eliminar Video</p>
+      <p class="text-center h5">Inserte el codigo embed para visualizar el video que desea eliminar.</p>
+    </div>
+    <br>
+    <div class="container">
+      <div class="alert alert-danger" *ngIf="alert2">{{mensaje}}</div>
+      <div class="alert alert-info" *ngIf="alert3">{{mensaje}}</div>
+      <div class="row"> 
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <form #embedCodeForm (ngSubmit)="buscarVideos()" class="form-inline">
+            <div class="form-group mb-2">
+              <label class="sr-only">Embed:</label>
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+              <input type="text" class="form-control" #embed="ngModel" [(ngModel)]="video_to_delete.embed" name="embed" placeholder="A1b2C3d4">              
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Buscar</button>
+          </form>
+          <br>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+      <div class="col"><span class="alert alert-danger" *ngIf="embed.value=='' && embed.touched">Por favor, inserta el codigo de insercción.</span></div>
+    </div>
+    
+
+    <div *ngIf="busqueda">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="card text-center">
+                    <div class="card-header h3 text-center">
+                        {{this.video_to_delete.nombre}}
+                    </div>
+                    <div class="card-block">
+                      <h4 class="card-title text-center">{{this.video_to_delete.description}}</h4>
+                      <div class="embed-responsive embed-responsive-16by9">
+                          <iframe class="embed-responsive-item" [src]='getURL2()' frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                    <div class="card-footer text-muted">
+                      Visitanos en: <a href="https://www.youtube.com/channel/UCMfYLyNvRlll7tr8wn9qo6A">Licemap</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <br>
+        <div>
+          <p class="text-center"><input type="button" class="btn btn-primary" (click)="deleteVideo()" value="Eliminar video"></p>
+        </div>
+    </div>
+
+</div>
+
+<!--°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°-->
+
+<div *ngIf="!identity">
+    <div class="card text-center">
+        <div class="card-header">
+          <strong>¡Espera!</strong>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">No has iniciado sesión</h5>
+          <p class="card-text">Si no eres un Administrador, por favor, vuelve a la pagina de inicio.</p>
+          <a routerLink="/" class="btn btn-primary">Regresar al inicio.</a>
+        </div>
+        <div class="card-footer text-muted">
+          
+        </div>
+      </div>
+</div>
+
+<br><br>

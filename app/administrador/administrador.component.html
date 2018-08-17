@@ -1,0 +1,49 @@
+<br>
+<div class="container">
+
+  <p class="h2">Modo Administrador.</p>
+  <p class="h4">ingrese los datos para acceder al modo administrador.</p>
+
+</div>
+
+<br><br>
+
+<div class="row">
+
+<div class="col-2"></div>
+
+<div class="col-8">
+
+  <div class="alert alert-danger" *ngIf="errorMensaje">
+    <strong>¡Error!</strong>, no se ha podido iniciar sesión.
+  </div>
+  <form #ngForm="ngForm" (ngSubmit)="iniciarSesion()">
+    <div class="form-group">
+      <p>
+          <label>Nombre de Usuario</label>
+          <input type="text" #username="ngModel" name="username" [(ngModel)]="user.username" class="form-control" placeholder="Ingrese Usuario">
+      </p>
+      <span *ngIf="username.value=='' && username.touched" class="alert alert-danger" role="alert">
+        El nombre de usuario es obligatorio
+      </span>
+    </div>
+    <br>
+    <div class="form-group">
+      <p>
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" #password="ngModel" name="password" [(ngModel)]="user.password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      </p>
+      <span *ngIf="password.value=='' && password.touched" class="alert alert-danger" role="alert">La contraseña es obligatoria</span>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+  </form>
+  <br>
+  <div *ngIf="datos" class="alert alert-danger">{{mensaje}}</div>
+  <br><br><br>  
+
+</div>
+
+<div class="col-2"></div>
+
+</div>
